@@ -6,6 +6,7 @@ def ColorMap = [
 //This pipeline should build a docker image and deploy to amazon ecs 
 pipeline{
     agent any
+    //some environment variables needed by aws 
     environment{
         registryCreds = 'ecr:us-east-1:aws-creds'  
         appRegistry = '374410237047.dkr.ecr.us-east-1.amazonaws.com/vprofileapp-img'
