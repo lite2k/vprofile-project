@@ -3,6 +3,7 @@ def ColorMap = [
     'FAILURE':'danger'
 ]
 
+
 pipeline{
     agent any
     environment{
