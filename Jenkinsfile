@@ -3,7 +3,7 @@ def ColorMap = [
     'FAILURE':'danger'
 ]
 
-
+//This pipeline should build a docker image and deploy to amazon ecs 
 pipeline{
     agent any
     environment{
