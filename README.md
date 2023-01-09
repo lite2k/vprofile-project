@@ -1,5 +1,7 @@
+## INFO
+This is just a fork, I don't own any of the source code and as such can't and shouldn't be credited for it. The only files that are my own are Jenkinsfiles in vp-rem and docker branches.
+######
 # Prerequisites
-#
 - JDK 1.8 or later
 - Maven 3 or later
 - MySQL 5.6 or later
