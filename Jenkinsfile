@@ -11,8 +11,8 @@ pipeline{
         registryCreds = 'ecr:us-east-1:aws-creds'  
         appRegistry = '374410237047.dkr.ecr.us-east-1.amazonaws.com/vprofileapp-img'
         registryUrl = 'https://374410237047.dkr.ecr.us-east-1.amazonaws.com'
-        cluster = 'vprofile'
         service = 'vprofile-app-svc'
+        cluster = 'vprofile'
     }
     tools{
         maven "MAVEN_3.6.3"
@@ -67,7 +67,7 @@ pipeline{
         }
         stage('SonarQube Quality Gate'){
             steps{
-                timeout(time:5, unit:'MINUTES'){
+                timeout(time:10, unit:'MINUTES'){
                     waitForQualityGate abortPipeline: true
                 }
             }
