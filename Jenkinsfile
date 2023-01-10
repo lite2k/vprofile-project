@@ -96,5 +96,12 @@ pipeline{
                 }
             }
         }
+    }post{
+        always{
+            echo 'Sneding Slack notifications.'
+            slackSend channel: '#vprofile-cicd',
+                color: ColorMap[currentBuild.currentResult],
+                message: "${currentBuild.currentResult}: Job ${env.JOB_NAME} build ${env.BUILD_NUMBER} \n" 
+        }
     }
 }
